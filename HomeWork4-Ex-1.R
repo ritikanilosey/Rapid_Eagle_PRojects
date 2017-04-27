@@ -1,0 +1,8 @@
+dat <- read.csv("EconomistData.csv")
+head(dat)
+library(ggplot2)
+head(dat)
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point(color="blue")
+ggplot(dat, aes(x = CPI, y = HDI, color = Region)) + geom_point()
+ggplot(dat, aes(x = CPI, y = HDI, color = Region)) + geom_point(size=2)
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point(aes(color = Region, size =  HDI.Rank))
