@@ -1,0 +1,10 @@
+dat <- read.csv("EconomistData.csv")
+head(dat)
+library(ggplot2)
+head(dat)
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point()
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point() + geom_smooth()
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point() + geom_smooth(method = lm)
+ggplot(dat, aes(x = CPI, y = HDI)) + geom_point() + geom_line()
+?loess
+ggplot(dat, aes(x = CPI, y = HDI)) +geom_point() + geom_smooth(span = .4)
